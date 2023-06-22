@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "organizer-v2"
+version = "0.1.0"
+description = "organizer"
+authors = ["silverdusk"]
+readme = "README.md"
+packages = [{include = "organizer_v2"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
