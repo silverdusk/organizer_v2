@@ -1,15 +1,13 @@
 FROM python:3.8-slim-buster
 
-ENV PYTHONUNBUFFERED 1
-
 WORKDIR /app
 
-COPY poetry.lock pyproject.toml /app/
+COPY pyproject.toml poetry.lock /app/
 
 RUN pip install poetry && \
     poetry config virtualenvs.create false && \
-    poetry install --no-interaction --no-ansi
+    poetry install --no-interaction --no-ansi --no-root
 
-COPY . /app/
+COPY organizer_v2 /app/organizer_v2
 
-CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["poetry", "run", "python", "organizer_v2/manage.py", "runserver", "0.0.0.0:8000"]
