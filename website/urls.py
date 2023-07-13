@@ -6,5 +6,6 @@ from . import views
 urlpatterns = [
     # path('', home, name='home'),
     # path('', views.home, name='home'),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path(r'form', views.my_form, name='form')
 ]
