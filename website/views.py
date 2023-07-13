@@ -5,8 +5,8 @@ from .models import MyModel
 # Create your views here.
 
 
-def home(request):
-    return HttpResponse("Welcome to the Organizer!")
+# def home(request):
+#     return HttpResponse("Welcome to the Organizer!")
 
 def index(request):
     data = MyModel.objects.all()

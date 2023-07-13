@@ -9,6 +9,8 @@ packages = [{include = "organizer_v2"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^4.2.2"
+psycopg2-binary = "^2.9.6"
+django-environ = "^0.10.0"
 
 
 [build-system]
