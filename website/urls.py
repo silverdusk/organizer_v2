@@ -7,5 +7,6 @@ urlpatterns = [
     # path('', home, name='home'),
     # path('', views.home, name='home'),
     path('', views.index, name='index'),
-    path(r'form', views.my_form, name='form')
+    path('submit-form/', views.submit_form, name='submit_form'),
+    path('table/', views.table, name='table'),
 ]

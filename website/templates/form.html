@@ -1,11 +1,12 @@
+<!-- form.html -->
+
 <div class="container">
-    {% include 'messages.html' %}
-    <form method="POST">
-        <fieldset>
-            <legend>Form</legend>
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Submit!</button>
-        </fieldset>
-    </form>
+  <form method="POST">
+    <fieldset>
+      <legend>Form</legend>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" {% if form.errors %}disabled{% endif %}>Submit</button>
+    </fieldset>
+  </form>
 </div>

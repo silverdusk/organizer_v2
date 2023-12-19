@@ -8,8 +8,12 @@
 <body>
 <h1>Welcome to organizer!</h1>
 <div class="container">
+    {% load static %}
     {% include 'messages.html' %}
     {% include 'form.html' %}
+    <br>
+    <a href="{% url 'table' %}">Table Page</a>
 </div>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 </body>
 </html>
